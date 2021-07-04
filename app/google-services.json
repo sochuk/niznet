@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "856944060777",
+    "project_id": "happysellingorder-705d3",
+    "storage_bucket": "happysellingorder-705d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856944060777:android:ba46c49b5e26d1d53cb5f8",
+        "android_client_info": {
+          "package_name": "com.happyselling.order"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856944060777-2j42dps8juvhgqr4g5qgh8uju12fap7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.happyselling.order",
+            "certificate_hash": "69e5a3f0e12f71ce8752dbd6115f05d65d416080"
+          }
+        },
+        {
+          "client_id": "856944060777-439oflu5fh79gp9havmintkn0p5ikfou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeDe7rFVZMhI_saTcccMje54i3cfyzkgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856944060777-439oflu5fh79gp9havmintkn0p5ikfou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

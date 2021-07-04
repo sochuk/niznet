@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_list_cart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="5dp"
+    android:fitsSystemWindows="false"
+    android:gravity="top"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/iv_back_detail_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.5dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:tint="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_pesanan"
+        android:fontFamily="@font/cabin_medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="-1dp"
+        android:textSize="18.5sp"
+        android:layout_marginLeft="18.5dp"/>
+
+</androidx.appcompat.widget.Toolbar>

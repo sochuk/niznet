@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.DetailCheckoutActivity">
+
+    <include layout="@layout/toolbar_detail_checkout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:text="@string/delivery_address"
+                    android:textColor="@color/smoke_gray"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <jrizani.jrspinner.JRSpinner
+                        android:id="@+id/spin_reg_toko"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:hint="@string/pilih_tempat_pengambilan"
+                        android:fontFamily="@font/cabin_semibold"
+                        app:backgroundTint="@color/dark_gray"
+                        app:jrs_icon_tint="@color/dark_gray"
+                        app:jrs_multiple="false"
+                        app:jrs_title="@string/pilih_tempat_pengambilan" />
+               <EditText
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/et_toko"
+                   android:visibility="gone"/>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:text="@string/payment_method"
+                    android:textColor="@color/smoke_gray"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <jrizani.jrspinner.JRSpinner
+                        android:id="@+id/spin_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:hint="@string/pilih_metode_pembayaran"
+                        android:fontFamily="@font/cabin_semibold"
+                        app:backgroundTint="@color/dark_gray"
+                        app:jrs_icon_tint="@color/dark_gray"
+                        app:jrs_multiple="false"
+                        app:jrs_title="@string/pilih_tempat_pengambilan" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_payment_method"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/light_gray" />
+                <LinearLayout
+                    android:id="@+id/ly_nama_bank"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:text="@string/bank_name"
+                    android:textColor="@color/smoke_gray"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <jrizani.jrspinner.JRSpinner
+                        android:id="@+id/spin_nama_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:hint="@string/pilih_nama_bank"
+                        android:fontFamily="@font/cabin_semibold"
+                        app:backgroundTint="@color/dark_gray"
+                        app:jrs_icon_tint="@color/dark_gray"
+                        app:jrs_multiple="false"
+                        app:jrs_title="@string/pilih_tempat_pengambilan" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_nama_bank"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_gray" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:text="@string/pesanan_saya"
+                    android:textColor="@color/smoke_gray"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16.2dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_detail_checkout"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/tb_bottom_cart"
+        android:elevation="10dp"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="bottom|center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:text="@string/total_pembayaran"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fd5018"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_total_harga_detail_checkout"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:text="0"
+                    android:textSize="17sp" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_detail_checkout"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/cabin_semibold"
+                android:layout_height="40dp"
+                android:background="@drawable/button_bg_gradient"
+                android:text="Pesan Sekarang"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

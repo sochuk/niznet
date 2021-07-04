@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.happyselling.niznet">
+    <!-- permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_niznet"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_niznet_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.happyselling.niznet.Activities.DetailTrxActivity"></activity>
+        <activity android:name="com.happyselling.niznet.Activities.SearchActivity" />
+        <activity android:name="com.happyselling.niznet.Activities.RegisterActivity" />
+        <activity android:name="com.happyselling.niznet.Activities.EditProfileActivity" />
+        <activity android:name="com.happyselling.niznet.Activities.RiwayatTransaksiPage.RiwayatTransaksiActivity" />
+        <activity android:name="com.happyselling.niznet.Activities.DetailCheckoutActivity" />
+        <activity android:name="com.happyselling.niznet.Activities.CartListActivity" />
+        <activity android:name="com.happyselling.niznet.Activities.DetailProductActivity" />
+        <activity android:name="com.happyselling.niznet.Activities.ProductPage.ProductListActivity" />
+        <activity android:name="com.happyselling.niznet.HomePageActivity" />
+        <activity android:name="com.happyselling.niznet.LoginActivity" />
+        <activity android:name="com.happyselling.niznet.Utils.Views.ImagePickerActivity" />
+        <activity android:name="com.happyselling.niznet.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- cache directory file provider paths -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+
+</manifest>

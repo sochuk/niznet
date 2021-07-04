@@ -1,0 +1,157 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.google.gms.google-services'
+
+configurations {
+    cleanedAnnotations
+    compile.exclude group: 'org.jetbrains', module: 'annotations'
+}
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId 'com.happyselling.order'
+        minSdkVersion 25
+        targetSdkVersion 29
+        versionCode 5
+        versionName "5.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    dexOptions {
+        preDexLibraries true
+        javaMaxHeapSize "4g"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // For control over item selection of both touch and mouse driven selection
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc03'
+    implementation 'com.roughike:bottom-bar:2.3.1'
+
+    //FOR Realtime proccess
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:4.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'com.mindorks.android:placeholderview:1.0.3'
+//    GLEBER GLEBER SHIMMER
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //untuk load poto bebas pilih yg mana
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //pagging
+
+    implementation 'android.arch.paging:runtime:1.0.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    implementation 'com.an.customfontview:customfont:0.1.0'
+
+//    implementation project(':customnavigationdrawer2')
+
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.21'
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.droidninja:filepicker:2.2.1'
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+    //dexter permissions
+    implementation 'com.karumi:dexter:6.2.1'
+
+
+    implementation 'com.github.jrizani:JRSpinner:1.1.2'
+
+    implementation 'com.github.marcoscgdev:DialogSheet:2.0.9'
+
+//    implementation 'com.github.zzz40500:AndroidSweetSheet:1.1.0'
+
+
+    implementation 'com.github.florent37:expansionpanel:1.2.4'
+
+
+    implementation 'com.github.chivorns.androidx:smartmaterialspinner:1.2.1'
+
+    implementation 'com.synnapps:carouselview:0.1.5'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.android.support:design:29.0.0'
+    implementation 'me.relex:circleindicator:2.1.0@aar'
+    implementation 'com.github.scottyab:showhidepasswordedittext:0.6'
+    implementation 'com.github.amarjain07:StickyScrollView:1.0.2'
+
+
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
+    implementation 'com.baoyz.pullrefreshlayout:library:1.2.0'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+    implementation 'com.github.florent37:singledateandtimepicker:2.1.4'
+
+
+    implementation 'com.vipulasri:ticketview:1.0.7'
+    implementation 'com.ernestoyaquello.stepperform:vertical-stepper-form:0.9.9'
+    implementation 'com.github.wRorsjakz:Android-NumPad:1.0.1'
+    implementation 'com.mikhaellopez:circularprogressbar:2.0.0'
+    implementation 'com.github.RobertApikyan:SegmentedControl:1.2.0'
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+
+    //Add this line
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+
+    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+
+    implementation 'com.crowdfire.cfalertdialog:cfalertdialog:1.1.0'
+}
+
+// ADD THIS AT THE BOTTOM
+    apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="0dp">
+
+    <ImageView
+        android:id="@+id/iv_brands"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="350dp"
+        android:src="@drawable/img12"
+        android:outlineAmbientShadowColor="@color/drak_gray" />
+
+
+    <customfonts.TextViewSFProDisplayRegular
+        android:id="@+id/tv_brands"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/cabin_medium"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center"
+        android:text="Air Mineral"
+        android:textColor="#585e66"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

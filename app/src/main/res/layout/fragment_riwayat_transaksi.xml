@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.RiwayatTransaksiFragment">
+
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/swip_riwayat_transaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_riwayat_transaksi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingLeft="20dp"
+            android:overScrollMode="never"
+            android:paddingTop="18dp"
+            android:paddingRight="20dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </com.baoyz.widget.PullRefreshLayout>
+</RelativeLayout>

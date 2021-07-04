@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Activities.EditProfileActivity">
+
+    <!--created by aakib khilji of wolfsoft-->
+
+    <include layout="@layout/toolbar_detail_profile"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="23dp"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/fl_poto_profile_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:civ_border_color="@color/dark_gray"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="@color/dark_gray"
+                android:id="@+id/ci_poto_profile_edit"
+                android:src="@drawable/image_21"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_plus_with_bg"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textSize="13.3sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+
+        <EditText
+            android:id="@+id/et_nama_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:text="John Doe"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:background="@drawable/rect_light_gray"
+            android:inputType="text"
+            android:padding="15sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:visibility="visible"
+            android:layout_marginTop="23.3dp"
+            android:textSize="13.3sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_password_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:textSize="15sp"
+            android:visibility="visible"
+            android:layout_marginTop="6dp"
+            android:text="John@gmail.com"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:background="@drawable/rect_light_gray"
+            android:inputType="textPassword"
+            android:padding="15sp"/>
+        <ImageView
+            android:id="@+id/iv_hide_pw_edit"
+            android:layout_marginLeft="-35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:padding="3dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_eye2"/>
+        <ImageView
+            android:id="@+id/iv_show_pw_edit"
+            android:layout_marginLeft="-35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:padding="3dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_eye_cross2"/>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:visibility="visible"
+            android:layout_marginTop="23.3dp"
+            android:textSize="13.3sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_confirm_password_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:visibility="visible"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:text="John@gmail.com"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:background="@drawable/rect_light_gray"
+            android:inputType="textPassword"
+            android:padding="15sp"/>
+        <ImageView
+            android:id="@+id/iv_hide_pw_edit_confirm"
+            android:layout_marginLeft="-35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:padding="3dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_eye2"/>
+        <ImageView
+            android:id="@+id/iv_show_pw_edit_confirm"
+            android:layout_marginLeft="-35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:padding="3dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_eye_cross2"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginTop="23.3dp"
+            android:textSize="13.3sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+
+        <EditText
+            android:id="@+id/et_email_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:text="John@gmail.com"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:background="@drawable/rect_light_gray"
+            android:inputType="textEmailAddress"
+            android:padding="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telpon"
+            android:layout_marginTop="23.3dp"
+            android:textSize="13.3sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+
+        <EditText
+            android:id="@+id/et_phone_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:text="9129371123"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:background="@drawable/rect_light_gray"
+            android:inputType="number"
+            android:padding="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:layout_marginTop="23.3dp"
+            android:textSize="13.3sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+
+        <EditText
+            android:id="@+id/et_alamat_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:text="9129371123"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:background="@drawable/rect_light_gray"
+            android:inputType="text"
+            android:padding="15sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KTP"
+            android:layout_marginTop="23.3dp"
+            android:textSize="13.3sp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+        <FrameLayout
+            android:id="@+id/fl_ktp_profile_edit"
+            android:layout_width="match_parent"
+            android:background="@drawable/border_shadow"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_ktp_profile_edit"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/image_21"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_plus_with_bg"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

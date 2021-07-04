@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/home"
+        android:iconTint="@color/bg_color"
+        android:id="@+id/bottomNavigationHome"
+        android:icon="@drawable/ic_trolley"/>
+</menu>

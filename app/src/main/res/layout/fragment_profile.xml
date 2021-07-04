@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fl_profile"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Fragments.ProfileFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--created by aakib khilji of wolfsoft-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18.3dp"
+        android:layout_marginTop="18.3dp"
+        android:layout_marginEnd="18.3dp"
+        android:layout_marginBottom="1dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="11.7dp"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_poto_profile_depan"
+                android:layout_width="66.7dp"
+                android:layout_height="66.7dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="11.7dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nama_profile_depan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:includeFontPadding="false"
+                    android:text="Hi, John Doe"
+                    android:textColor="@color/txt_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_email_profile_depan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:includeFontPadding="false"
+                    android:text="Erik@gmail.com"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="13.3sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_edit_profile_depan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/orange_light_rect"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                android:text="Edit"
+                android:textColor="@color/orange"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.3dp"
+        android:layout_marginTop="18.3dp"
+        android:layout_marginRight="18.3dp"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:id="@+id/llManageAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginLeft="11.7dp"
+                android:layout_marginTop="18.3dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/address" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11.7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_address_profile_depan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="Manage Address"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/dark_gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11.7dp"
+                android:visibility="visible"
+                android:layout_marginTop="18.3dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/phone3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11.7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_telp_profile_depan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/sf_pro_display_medium"
+                        android:text="Contact us / About us"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/dark_gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18.3dp"
+        android:layout_marginEnd="18.3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="1dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="5dp">
+        <LinearLayout
+            android:id="@+id/ll_Logout"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11.7dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/sign_out" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11.7dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:text="Sign Out"
+                    android:textColor="@color/txt_color"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</FrameLayout>
