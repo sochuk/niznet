@@ -1,3 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_item_trx"
+    android:elevation="5dp"
+    app:cardCornerRadius="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginBottom="12dp">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:id="@+id/ll_item_trx">
 
-    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/iv_item_product_detail_trx"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/logo"/>
+
+    <LinearLayout
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:fontFamily="@font/cabin_medium"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_kd_trx"
+        android:layout_height="wrap_content"
+        android:text="Nama Produk"
+        android:textSize="9sp"
+        android:textColor="@color/dark_gray"/>
+        <TextView
+            android:id="@+id/tv_nama_produk_detail_trx"
+            android:fontFamily="@font/cabin_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2323213213"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/dark_gray"/>
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/cabin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah pesanan"
+                android:textSize="9sp"
+                android:textColor="@color/dark_gray"/>
+        <TextView
+            android:id="@+id/tv_qty_detail_trx"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/cabin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 barang"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingRight="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:fontFamily="@font/cabin_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Harga"
+            android:textSize="9sp"
+            android:textColor="@color/dark_gray"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_total_harga_detail_trx"
+            android:fontFamily="@font/cabin_bold"
+            android:textColor="#fd5018"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="top"
+            android:layout_height="match_parent"
+            android:text="Rp23920390"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
